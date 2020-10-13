@@ -1,18 +1,40 @@
 'use strict';
 
-let num = 266219;
-console.log(num.toString().split(''));
+let lang = prompt('Введите язык ru или en');
 
-let arr = num.toString().split('');
-let increase = arr.reduce((sum, current) => sum * current);
-console.log('increase: ', increase);
-
-let raising = increase ** 3;
-console.log('raising: ', raising);
-
-let newArr = raising.toString();
-alert('Первые 2 цифры полученного числа равны: ' + newArr.slice(0,2));
+if (lang === 'ru'){
+    alert('Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье');
+} else if (lang === 'en'){
+    alert('Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday');
+} else if (lang !== 'ru' && lang !== 'en'){
+    alert('Ошибка, вы ввели что то другое');
+}
 
 
+let lang2 = prompt('Введите язык ru или en');
 
+switch (lang2) {
+  case 'ru':
+    alert( 'Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье' );
+    break;
+  case 'en':
+    alert( 'Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday' );
+    break;
+  default:
+    alert( 'Ошибка, вы ввели что то другое' );
+}
+
+
+let lang3 = prompt('Введите язык ru или en');
+
+let weekday = [
+    ['Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье'],
+    ['Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday'],
+    ['Ошибка, вы ввели что то другое']
+];
+
+let message = (lang3 === 'ru') ? weekday[0] :
+  (lang3 === 'en') ? weekday[1] : weekday[2];
+
+alert( message );
 
