@@ -38,3 +38,9 @@ let message = (lang3 === 'ru') ? weekday[0] :
 
 alert( message );
 
+
+let namePerson = prompt('Введите имя (Например Артем)');
+let message2 = (namePerson === 'Артем') ? 'Директор' :
+  (namePerson === 'Максим') ? 'Преподователь' : 'Студент';
+
+console.log( message2 );
